@@ -19,8 +19,6 @@ import os
 
 PORT = int(os.environ.get("PORT", 8787))
 
-server = ThreadingHTTPServer(("0.0.0.0", PORT), Handler)
-server.serve_forever()
 def load_env():
     env = ROOT / ".env"
     if not env.exists():
@@ -329,6 +327,7 @@ class Handler(SimpleHTTPRequestHandler):
             self.send_json(500,{"error":str(e),"code":"SYSTEM_ERROR"})
 
 if __name__=="__main__":
+    HOST = "0.0.0.0"
     print(f"NEXORA Phase 2 backend: http://{HOST}:{PORT}")
     print("Configured providers:",
           "CHATGPT" if os.getenv("OPENAI_API_KEY") else "-",
@@ -337,4 +336,4 @@ if __name__=="__main__":
           "GROQ" if os.getenv("GROQ_API_KEY") else "-")
     print("Instagram webhook:", "READY" if instagram_webhook_ready() else "NOT CONFIGURED")
     print("Press Ctrl+C to stop.")
-    ThreadingHTTPServer((HOST,PORT),Handler).serve_forever()
+    ThreadingHTTPServer((HOST, PORT), Handler).serve_forever()
