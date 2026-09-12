@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#02080b">
+  <meta name="description" content="NEXORA AI — futuristic multi-AI command center for solving, coding and creating.">
+  <title>NEXORA AI — Neural Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Orbitron:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="nexora-loader" id="nexoraLoader" aria-label="Loading NEXORA">
+    <div class="loader-core"><span>✦</span></div>
+    <div class="loader-brand">NEXORA</div>
+    <div class="loader-status">INITIALIZING NEURAL INTERFACE <span id="loaderPercent">0%</span></div>
+    <div class="loader-track"><i id="loaderBar"></i></div>
+    <div class="loader-log" id="loaderLog">BOOT SEQUENCE // START</div>
+  </div>
+  <div class="scanline"></div>
+  <div class="noise"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-core">✦</div>
+      <div>
+        <div class="brand-name">NEXORA</div>
+        <div class="brand-sub">JUST A RATHER VERY INTELLIGENT SYSTEM</div>
+      </div>
+    </div>
+
+    <div class="system-center">
+      <div><span>SYSTEM STATUS</span><strong><i></i> OPTIMAL</strong></div>
+      <div><span>LOCAL TIME</span><strong id="clock">00:00:00</strong></div>
+      <div class="weather-top" id="weatherModule"><span>WEATHER // LIVE</span><strong id="weatherTop">LOADING...</strong></div>
+    </div>
+
+    <div class="top-actions">
+      <a class="ig-notifier" href="https://www.instagram.com/direct/inbox/" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram messages" title="Instagram messages"><span>IG</span><i></i></a>
+      <button aria-label="Notifications">◌</button>
+      <button aria-label="Settings">⚙</button>
+      <div class="profile"><span>NEXORA USER</span>
+        <div class="profile-orb"></div>
+      </div>
+    </div>
+    <button class="mobile-menu" id="mobileMenu" aria-label="Menu">☰</button>
+  </header>
+
+  <main class="hud">
+    <aside class="side left-side">
+      <section class="hud-panel">
+        <div class="panel-corner"></div>
+        <div class="panel-header">
+          <div><span>SYSTEM //</span><strong>◉ VITAL SIGNS</strong></div><b>›</b>
+        </div>
+        <div class="panel-line"></div>
+        <div class="heart-rate">
+          <div><span>CORE LOAD</span><strong>72<small>%</small></strong></div>
+          <div class="pulse-icon">⌁</div>
+        </div>
+        <div class="bars" id="bars"></div>
+        <div class="mini-grid">
+          <div class="stat"><span>CPU</span><strong>24%</strong></div>
+          <div class="stat"><span>MEMORY</span><strong>5.8 GB</strong></div>
+        </div>
+      </section>
+
+      <section class="hud-panel instagram-panel" id="instagramPanel">
+        <div class="panel-corner"></div>
+        <div class="panel-header">
+          <div><span>SOCIAL //</span><strong>◎ INSTAGRAM DM</strong></div><b id="igUnread">0</b>
+        </div>
+        <div class="panel-line"></div>
+        <div class="ig-status-row">
+          <span id="igConnectionDot"></span>
+          <span id="igConnectionText">CHECKING CONNECTION...</span>
+        </div>
+        <div class="ig-messages" id="igMessages">
+          <div class="ig-empty">NO INSTAGRAM MESSAGES LOADED</div>
+        </div>
+        <div class="ig-actions">
+          <button type="button" id="igRefresh">↻ REFRESH</button>
+          <a href="https://developers.facebook.com/apps/" target="_blank" rel="noopener noreferrer">CONNECT META</a>
+        </div>
+      </section>
+
+      <section class="hud-panel">
+        <div class="panel-corner"></div>
+        <div class="panel-header">
+          <div><span>SYSTEM //</span><strong>◈ RT-MONITOR</strong></div><b>›</b>
+        </div>
+        <div class="panel-line"></div>
+        <div class="metric">
+          <div><span>◈ CPU LOAD</span><strong>24%</strong></div>
+          <div class="metric-bar"><i style="width:24%"></i></div>
+        </div>
+        <div class="metric">
+          <div><span>▣ MEMORY</span><strong>48%</strong></div>
+          <div class="metric-bar"><i style="width:48%"></i></div>
+        </div>
+        <div class="metric">
+          <div><span>▣ STORAGE</span><strong>89%</strong></div>
+          <div class="metric-bar"><i style="width:89%"></i></div>
+        </div>
+      </section>
+
+      <section class="hud-panel network-panel">
+        <div class="panel-corner"></div>
+        <div class="panel-header">
+          <div><span>SYSTEM //</span><strong>⌁ UPLINK: 5G</strong></div><b>›</b>
+        </div>
+        <div class="panel-line"></div>
+        <div class="network">
+          <div class="radar">⌁</div><strong>SIGNAL ENCRYPTED</strong><small>NEXORA-NET</small>
+        </div>
+      </section>
+    </aside>
+
+    <section class="core-section">
+      <div class="corner tl"></div>
+      <div class="corner tr"></div>
+      <div class="corner bl"></div>
+      <div class="corner br"></div>
+      <div class="core-content">
+        <div class="core-rings">
+          <div class="ring ring-one"></div>
+          <div class="ring ring-two"></div>
+          <div class="ring ring-three"></div>
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="core">
+            <div class="core-inner">
+              <div class="core-symbol">✦</div><span>CORE</span><strong>ACTIVE</strong>
+            </div>
+          </div>
+        </div>
+        <div class="core-title"><span>NEURAL INTELLIGENCE ENGINE</span><strong>NEXORA ONLINE</strong></div>
+        <div class="waveform" id="waveform"></div>
+        <button class="command-status" id="openChat">◉ <span>AWAITING COMMAND...</span></button>
+        <form class="command-line core-command" id="quickForm">
+          <span>⌘</span>
+          <input id="quickInput" autocomplete="off" placeholder="ASK NEXORA ANYTHING...">
+          <button type="submit">➜</button>
+        </form>
+      </div>
+    </section>
+
+    <aside class="side right-side">
+      <section class="hud-panel">
+        <div class="panel-corner"></div>
+        <div class="panel-header">
+          <div><span>SYSTEM //</span><strong>ϟ CORE STATUS</strong></div><b>›</b>
+        </div>
+        <div class="panel-line"></div>
+        <div class="power-row">
+          <div><span>POWER CORE</span><strong>98%</strong></div>
+          <div><span>STRUCTURAL</span><strong>100%</strong></div>
+        </div>
+        <div class="power-bars"><i style="width:98%"></i><i style="width:100%"></i></div>
+        <div class="defense-title">SYSTEM MODULES</div>
+        <div class="module-grid"><button>◈</button><button>ϟ</button><button>⌁</button><button>⏻</button></div>
+      </section>
+
+      <section class="hud-panel logs-panel">
+        <div class="panel-corner"></div>
+        <div class="panel-header">
+          <div><span>SYSTEM //</span><strong>▣ RT-LOG</strong></div><b>›</b>
+        </div>
+        <div class="panel-line"></div>
+        <div class="logs" id="logs"></div>
+      </section>
+
+      <section class="hud-panel terminal-panel">
+        <div class="panel-corner"></div>
+        <div class="panel-header">
+          <div><span>SYSTEM //</span><strong>▣ NEXORA</strong></div><b>›</b>
+        </div>
+        <div class="panel-line"></div>
+        <div class="terminal"><span>_</span>
+          <p>nexora --status<br><em>Analyzing neural systems...</em></p>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <div class="chat-overlay" id="chatOverlay" aria-hidden="true">
+    <section class="chat-window">
+      <div class="chat-head">
+        <div class="chat-head-main"><span>NEXORA // AI CORE</span><strong><i></i> ONLINE</strong></div>
+        <label class="model-select-wrap" title="AI provider">
+          <span>ROUTER</span>
+          <select id="modelSelect" aria-label="AI provider">
+            <option value="auto">AUTO</option>
+            <option value="openai">CHATGPT</option>
+            <option value="gemini">GEMINI</option>
+            <option value="claude">CLAUDE</option>
+            <option value="groq">GROQ</option>
+          </select>
+        </label>
+        <span class="chat-lock" title="Persistent HUD">●</span>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="thinking-indicator" id="thinkingIndicator" hidden><span class="thinking-core">✦</span><span>NEXORA IS THINKING</span><i></i><i></i><i></i></div>
+        <div class="welcome">
+          <div class="welcome-core">✦</div>
+          <h2>HOW CAN I HELP?</h2>
+          <p>Ask NEXORA to solve a problem, explain a concept, create code, generate ideas or analyze information.</p>
+          <div class="quick-actions">
+            <button data-prompt="Build me a modern website">◈ Build a website</button>
+            <button data-prompt="Explain artificial intelligence simply">✦ Explain something</button>
+            <button data-prompt="Help me write JavaScript code">⌘ Help me code</button>
+          </div>
+        </div>
+      </div>
+      <form class="chat-input" id="chatForm">
+        <input id="chatInput" autocomplete="off" placeholder="Transmit command...">
+        <button type="button" id="voiceBtn" title="Voice input">🎙</button>
+        <button type="button" id="speakBtn" title="Voice output">🔊</button>
+        <button type="submit">➜</button>
+      </form>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
