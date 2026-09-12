@@ -15,12 +15,12 @@ from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError, URLError
 from pathlib import Path
-import json, os, re, sys, time
+import os
 
-ROOT = Path(__file__).resolve().parent
-PORT = int(os.getenv("NEXORA_PORT", "8787"))
-HOST = os.getenv("NEXORA_HOST", "127.0.0.1")
+PORT = int(os.environ.get("PORT", 8787))
 
+server = ThreadingHTTPServer(("0.0.0.0", PORT), Handler)
+server.serve_forever()
 def load_env():
     env = ROOT / ".env"
     if not env.exists():
