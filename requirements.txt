@@ -1,0 +1,2 @@
+# NEXORA uses only Python standard library — no third-party packages needed.
+# This file exists so Render detects the project as a Python service.
